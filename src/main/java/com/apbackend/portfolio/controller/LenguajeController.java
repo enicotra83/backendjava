@@ -19,7 +19,8 @@ import com.apbackend.portfolio.services.LenguajeService;
 
 @RestController
 @RequestMapping("/api/lenguaje")
-@CrossOrigin(origins = "https://enicotraap.web.app/")
+// @CrossOrigin(origins = "https://enicotraap.web.app/")
+@CrossOrigin(origins = "**")
 public class LenguajeController {
     private final LenguajeService lenguajeService;
 
