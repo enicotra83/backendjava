@@ -19,8 +19,8 @@ import com.apbackend.portfolio.services.ProyectosService;
 
 @RestController
 @RequestMapping("/api/proyectos")
-// @CrossOrigin(origins = "https://enicotraap.web.app/")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://enicotraap.web.app/")
+//@CrossOrigin(origins = "*")
 
 public class ProyectosController {
     private final ProyectosService proyectosService;
