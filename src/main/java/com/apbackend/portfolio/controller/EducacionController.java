@@ -18,8 +18,8 @@ import com.apbackend.portfolio.services.EducacionService;
 
 @RestController
 @RequestMapping("/api/educacion")
-// @CrossOrigin(origins = "https://enicotraap.web.app/")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://enicotraap.web.app/")
+//@CrossOrigin(origins = "*")
 public class EducacionController {
     private final EducacionService educacionService;
 
