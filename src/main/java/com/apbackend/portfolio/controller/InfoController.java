@@ -15,7 +15,7 @@ import com.apbackend.portfolio.services.InfoService;
 
 @RestController
 @RequestMapping("/api/info")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://enicotraap.web.app/")
 public class InfoController {
     private final InfoService infoService;
 

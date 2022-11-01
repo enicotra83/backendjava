@@ -12,12 +12,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
 import java.util.List;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.apbackend.portfolio.models.Lenguaje;
 import com.apbackend.portfolio.services.LenguajeService;
 
 @RestController
 @RequestMapping("/api/lenguaje")
+@CrossOrigin(origins = "https://enicotraap.web.app/")
 public class LenguajeController {
     private final LenguajeService lenguajeService;
 

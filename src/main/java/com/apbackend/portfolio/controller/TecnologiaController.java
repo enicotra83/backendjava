@@ -12,11 +12,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
 import java.util.List;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.apbackend.portfolio.models.Tecnologia;
 import com.apbackend.portfolio.services.TecnologiaService;
 
 @RestController
+@CrossOrigin(origins = "https://enicotraap.web.app/")
 @RequestMapping("/api/tecnologia")
 public class TecnologiaController {
     private final TecnologiaService tecnologiaService;

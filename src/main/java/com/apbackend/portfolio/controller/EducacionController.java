@@ -12,12 +12,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.http.HttpStatus;
 import java.util.List;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import com.apbackend.portfolio.models.Educacion;
 import com.apbackend.portfolio.services.EducacionService;
 
 @RestController
 @RequestMapping("/api/educacion")
+@CrossOrigin(origins = "https://enicotraap.web.app/")
 public class EducacionController {
     private final EducacionService educacionService;
 

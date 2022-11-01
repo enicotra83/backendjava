@@ -12,13 +12,15 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
 import java.util.List;
 import org.springframework.security.access.prepost.PreAuthorize;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.apbackend.portfolio.models.Proyectos;
 import com.apbackend.portfolio.services.ProyectosService;
 
 @RestController
 @RequestMapping("/api/proyectos")
+@CrossOrigin(origins = "https://enicotraap.web.app/")
+
 public class ProyectosController {
     private final ProyectosService proyectosService;
 
