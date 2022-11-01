@@ -30,7 +30,7 @@ public class InfoController {
         return new ResponseEntity<>(info, HttpStatus.OK);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    // @PreAuthorize("hasRole('ADMIN')")
     @PutMapping
     public ResponseEntity<Info> editarInfo(@RequestBody Info info) {
         Info updateInfo = infoService.actualizarInfo(info);

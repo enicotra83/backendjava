@@ -34,21 +34,21 @@ public class TecnologiaController {
         return new ResponseEntity<>(tecnologias, HttpStatus.OK);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    // @PreAuthorize("hasRole('ADMIN')")
     @PutMapping
     public ResponseEntity<Tecnologia> actualizarTecnologia(@RequestBody Tecnologia tecnologia) {
         Tecnologia updateTecnologia = tecnologiaService.actualizarTecnologia(tecnologia);
         return new ResponseEntity<>(updateTecnologia, HttpStatus.OK);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    // @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     public ResponseEntity<Tecnologia> agregarTecnologia(@RequestBody Tecnologia tecnologia) {
         Tecnologia nuevaTecnologia = tecnologiaService.agregarTecnologia(tecnologia);
         return new ResponseEntity<>(nuevaTecnologia, HttpStatus.CREATED);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    // @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<?> borrarTecnologia(@PathVariable("id") Long id) {
         tecnologiaService.borrarTecnologia(id);

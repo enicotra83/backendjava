@@ -34,21 +34,21 @@ public class LenguajeController {
         return new ResponseEntity<>(lenguajes, HttpStatus.OK);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    // @PreAuthorize("hasRole('ADMIN')")
     @PutMapping
     public ResponseEntity<Lenguaje> editarLenguaje(@RequestBody Lenguaje lenguaje) {
         Lenguaje updateLenguaje = lenguajeService.actualizarLenguaje(lenguaje);
         return new ResponseEntity<>(updateLenguaje, HttpStatus.OK);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    // @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     public ResponseEntity<Lenguaje> agregarLenguaje(@RequestBody Lenguaje lenguaje) {
         Lenguaje nuevoLenguaje = lenguajeService.agregarLenguaje(lenguaje);
         return new ResponseEntity<>(nuevoLenguaje, HttpStatus.CREATED);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    // @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<?> borrarLenguaje(@PathVariable("id") Long id) {
         lenguajeService.borrarLenguaje(id);

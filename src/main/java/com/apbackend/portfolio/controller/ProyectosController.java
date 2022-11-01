@@ -35,21 +35,21 @@ public class ProyectosController {
         return new ResponseEntity<>(proyectosLista, HttpStatus.OK);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    // @PreAuthorize("hasRole('ADMIN')")
     @PutMapping
     public ResponseEntity<Proyectos> actualizarProyectos(@RequestBody Proyectos proyectos) {
         Proyectos updateProyecto = proyectosService.actualizarProyectos(proyectos);
         return new ResponseEntity<>(updateProyecto, HttpStatus.OK);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    // @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     public ResponseEntity<Proyectos> agregarProyectos(@RequestBody Proyectos proyectos) {
         Proyectos nuevoProyecto = proyectosService.agregarProyectos(proyectos);
         return new ResponseEntity<>(nuevoProyecto, HttpStatus.CREATED);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    // @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/{id}")
     public ResponseEntity<?> borrarProyectos(@PathVariable("id") Long id) {
         proyectosService.borrarProyectos(id);
