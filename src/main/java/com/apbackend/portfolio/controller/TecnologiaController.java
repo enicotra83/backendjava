@@ -19,7 +19,7 @@ import com.apbackend.portfolio.services.TecnologiaService;
 
 @RestController
 // @CrossOrigin(origins = "https://enicotraap.web.app/")
-@CrossOrigin(origins = "**")
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/tecnologia")
 public class TecnologiaController {
     private final TecnologiaService tecnologiaService;
